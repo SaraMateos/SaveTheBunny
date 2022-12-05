@@ -18,7 +18,6 @@ import android.view.View;
 import androidx.core.content.res.ResourcesCompat;
 
 import java.util.ArrayList;
-import java.util.EmptyStackException;
 import java.util.Random;
 
 
@@ -46,7 +45,7 @@ public class GameView extends View {
     public GameView(Context context) {
         super(context);
         this.context = context;
-        background = BitmapFactory.decodeResource(getResources(), R.drawable.uncolored_forest);
+        background = BitmapFactory.decodeResource(getResources(), R.drawable.background);
         ground = BitmapFactory.decodeResource(getResources(), R.drawable.sandMid);
         rabbit = BitmapFactory.decodeResource(getResources(), R.drawable.rabbit);
         Display display = ((Activity) getContext()).getWindowManager().getDefaultDisplay();
