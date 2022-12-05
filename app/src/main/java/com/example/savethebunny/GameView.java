@@ -46,7 +46,7 @@ public class GameView extends View {
         this.context = context;
         background = BitmapFactory.decodeResource(getResources(), R.drawable.background);
         ground = BitmapFactory.decodeResource(getResources(), R.drawable.sand_mid);
-        rabbit = BitmapFactory.decodeResource(getResources(), R.drawable.rabbit);
+        rabbit = BitmapFactory.decodeResource(getResources(), R.drawable.rabbit_reducido);
         Display display = ((Activity) getContext()).getWindowManager().getDefaultDisplay();
         Point size = new Point();
         display.getSize(size);

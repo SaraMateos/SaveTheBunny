@@ -11,10 +11,10 @@
         android:orientation="horizontal">
 
         <ImageButton
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
             android:background="@drawable/restart"
-
             android:onClick="restart" />
 
         <View
@@ -23,8 +23,9 @@
             android:layout_weight="1" />
 
         <ImageButton
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
             android:background="@drawable/exit"
             android:onClick="exit" />
 
