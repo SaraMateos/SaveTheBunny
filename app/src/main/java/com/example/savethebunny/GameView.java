@@ -40,7 +40,6 @@ public class GameView extends View {
     float oldX;
     float oldRabbitX;
     ArrayList<Spike> spikes;
-    ArrayList<Explosion> explosions;
 
     public GameView(Context context) {
         super(context);
@@ -66,13 +65,12 @@ public class GameView extends View {
         textPaint.setColor(Color.rgb(255, 165, 0));
         textPaint.setTextSize(TEXT_SIZE);
         textPaint.setTextAlign(Paint.Align.LEFT);
-        textPaint.setTypeface(ResourcesCompat.getFont(context, R.font.Kenney_Blocks));
+        textPaint.setTypeface(ResourcesCompat.getFont(context, R.font.kenney_blocks));
         healthPaint.setColor(Color.GREEN);
         random = new Random();
         rabbitX = dWidth / 2 - rabbit.getWidth() / 2;
         rabbitY = dHeight - ground.getHeight() - rabbit.getHeight();
         spikes = new ArrayList<>();
-        explosions = new ArrayList<>();
 
         for (int i = 0; i < 3; i++) {
             Spike spike = new Spike(context);
@@ -99,10 +97,6 @@ public class GameView extends View {
 
             if (spikes.get(i).spikeY + spikes.get(i).getSpikeHeight() >= dHeight - ground.getHeight()) {
                points += 10;
-               Explosion explosion = new Explosion(context);
-               explosion.explosionX = spikes.get(i).spikeX;
-               explosion.explosionY = spikes.get(i).spikeY;
-               explosions.add(explosion);
                spikes.get(i).resetPosition();
             }
         }
@@ -121,15 +115,6 @@ public class GameView extends View {
                     context.startActivity(intent);
                     ((Activity) context).finish();
                 }
-            }
-        }
-
-        for (int i = 0; i < explosions.size(); i++) {
-            canvas.drawBitmap(explosions.get(i).getExplosion(explosions.get(i).explosionFrame), explosions.get(i).explosionX, explosions.get(i).explosionY, null);
-            explosions.get(i).explosionFrame++;
-
-            if (explosions.get(i).explosionFrame > 3) {
-                explosions.remove(i);
             }
         }
 

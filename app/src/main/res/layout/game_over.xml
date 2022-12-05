@@ -11,9 +11,10 @@
         android:orientation="horizontal">
 
         <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:background="@drawable/restart"
+
             android:onClick="restart" />
 
         <View
@@ -22,8 +23,8 @@
             android:layout_weight="1" />
 
         <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:background="@drawable/exit"
             android:onClick="exit" />
 
@@ -36,13 +37,11 @@
         android:orientation="vertical">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/ivNewHighest"
-
-            android:background="@drawable/sand"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/trofeo"
             android:visibility="gone" />
-        <!--android:background="@drawable/new_highest" -->
 
         <TableLayout
             android:layout_width="wrap_content"
