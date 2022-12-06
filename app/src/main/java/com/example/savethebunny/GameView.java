@@ -20,7 +20,6 @@ import androidx.core.content.res.ResourcesCompat;
 import java.util.ArrayList;
 import java.util.Random;
 
-
 public class GameView extends View {
 
     Bitmap background, ground, rabbit;
@@ -144,7 +143,7 @@ public class GameView extends View {
 
             if (action == MotionEvent.ACTION_MOVE) {
                 float shift = oldX - touchX;
-                float newRabbitX = oldRabbitX - touchX;
+                float newRabbitX = oldRabbitX - shift;
                 if (newRabbitX <= 0) {
                     rabbitX = 0;
                 } else if (newRabbitX >= dWidth - rabbit.getWidth()) {
@@ -154,7 +153,6 @@ public class GameView extends View {
                 }
             }
         }
-
         return true;
     }
 }
