@@ -6,8 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 
-// Tutorial del juego  --> https://www.youtube.com/watch?v=gfX8UHTpq3o&ab_channel=SandipBhattacharya
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
